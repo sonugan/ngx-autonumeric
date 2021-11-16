@@ -1,0 +1,14 @@
+[
+    {
+        "option": "allowDecimalPadding",
+        "type": "select",
+        "options": [true, false, "floats"],
+        "description": "Allow padding the decimal places with zeros. If set to 'floats', padding is only done when there are some decimals.",
+        "default": true
+    },
+    {
+        "option": "decimalPlaces",
+        "type": "number",
+        "default": 2
+    }
+]

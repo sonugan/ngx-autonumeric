@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <input type="text" integerAutonumeric formControlName="number" [config]="config"/>
+  <!-- <input type="text" integerAutonumeric formControlName="number"/> -->
+</form>
+{{config | json}}
+
+<!-- <form [formGroup]="configForms">
+  <input type="checkbox" formControlName="allowDecimalPadding"/>
+  <input type="number" formControlName="decimalPlaces"/>
+</form> -->
+
+<app-configurations (configsChange)="configsChange($event)"></app-configurations>

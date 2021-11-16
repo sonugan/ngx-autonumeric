@@ -1,0 +1,16 @@
+<form [formGroup]="configForms">
+    <div *ngFor="let item of configs">
+        <div>{{item.option}}</div>
+        <div [ngSwitch]="item.type">
+            <div *ngSwitchCase="'select'">
+                <select [formControlName]="item.option">
+                    <option *ngFor="let option of item.options" [ngValue]="option">{{option}}</option>
+                </select>
+            </div>
+            <div *ngSwitchCase="'number'">
+                <input type="'number'" [formControlName]="item.option"/>
+            </div>
+            <div *ngSwitchDefault>output2</div>
+        </div>
+    </div>
+</form>
